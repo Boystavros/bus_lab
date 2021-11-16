@@ -1,14 +1,14 @@
 class Bus:
     def __init__(self, route, destination):
-        self.route = route
+        self.route_number = route
         self.destination = destination
         self.passengers = []
 
     
     def drive(self):
-        return "Brum Brum"
+        return "Brum brum"
     
-    def count_passengers(self):
+    def passenger_count(self):
         return len(self.passengers)
 
     def pick_up(self, passenger):
@@ -18,7 +18,7 @@ class Bus:
         self.passengers.remove(passenger)
     
     def empty(self):
-        del self.passengers
+        self.passengers.clear()
 
 
 
